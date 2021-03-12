@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" id="Definitions_1of36sm" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.6.0">
+  <decision id="evaluation_client" name="Decision 1">
+    <decisionTable id="decisionTable_1" hitPolicy="ANY">
+      <input id="input_1" label="type de demande">
+        <inputExpression id="inputExpression_1" typeRef="integer">
+          <text>nbdemander</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="besoin de validation" name="nb" typeRef="boolean" />
+      <rule id="DecisionRule_0xx8gfu">
+        <inputEntry id="UnaryTests_0xg3de7">
+          <text>&gt;=15</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00ivm8t">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03u6k4t">
+        <inputEntry id="UnaryTests_0av7cwm">
+          <text>&lt;15</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0j9yddx">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1m4zd1m">
+        <inputEntry id="UnaryTests_0fbyfql">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05c1emo">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

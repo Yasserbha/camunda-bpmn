@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  mvp-spring:
+      container_name: mvp-spring-boot
+      image: mvp-test-rasa-camunda:latest
+      networks:
+        - backend
+      ports:
+        - 5555:8081
+      restart: always
+      stdin_open: true
+      tty: true
+networks:
+  backend:
+    name: local_backend

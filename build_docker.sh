@@ -1,0 +1,1 @@
+docker build . -t mvp-test-rasa-camunda:latest
